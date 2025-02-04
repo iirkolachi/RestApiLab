@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Homework" parallel="tests" thread-count="1">
-    <test name="Commands Test">
+<suite name="RestApiLab" parallel="tests" thread-count="1">
+    <test name="TestDataAPI">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="POMtest.CommandsTest">
-            </class>
-        </classes>
-    </test>
-    <test name="Waits Test">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="POMtest.WaitsTest">
-            </class>
-        </classes>
-    </test>
-    <test name="Web Forms Test">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="POMtest.WebFormsTest">
+            <class name="TestDataAPI">
             </class>
         </classes>
     </test>

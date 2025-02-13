@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="RestApiLab" parallel="tests" thread-count="1">
+<suite name="RestApiLab" parallel="tests" thread-count="2">
     <test name="TestDataAPI">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="TestDataAPI">
+            </class>
+        </classes>
+    </test>
+    <test name="TestSmsModule">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="TestSmsModule">
             </class>
         </classes>
     </test>

@@ -53,4 +53,24 @@ public class DataControllerSMSModule {
 
                 return getUserRequestModel;
             }
+
+    public static Object[][] getDataObjects (List<GetSmsRequestModel> getSmsRequestModels) {
+        //List<GetSmsRequestModel> getSmsRequestModels = DataControllerSMSModule.getUserRequestModel(DataControllerSMSModule.queryGetTelNumbers);
+        Object[][] data = new Object[getSmsRequestModels.size()][1];
+        for (int i = 0; i < getSmsRequestModels.size(); i++) {
+            data[i][0] = getSmsRequestModels.get(i);
+        }
+        return data;
+    }
+
+    public static Object[][] getDataIndividual(List<GetSmsRequestModel> getSmsRequestModels) {
+        //List<GetSmsRequestModel> getSmsRequestModels = DataControllerSMSModule.getUserRequestModel(DataControllerSMSModule.queryGetTelNumbers);
+        Object[][] data = new Object[getSmsRequestModels.size()][3];
+        for (int i = 0; i < getSmsRequestModels.size(); i++) {
+            data[i][0] = getSmsRequestModels.get(i).getPersonId();
+            data[i][1] = getSmsRequestModels.get(i).getTelNumber();
+            data[i][2] = getSmsRequestModels.get(i).getConsent();
+        }
+        return data;
+    }
 }

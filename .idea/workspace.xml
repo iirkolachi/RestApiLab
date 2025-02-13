@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="467c9a7b-50d2-49f3-bff4-0131cc027787" name="Changes" comment="tasks committed">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DBAccessSQL/DBAccessSMSModule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataController/DataControllerSMSModule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/SmsModule/Data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/SmsModule/GetSmsRequestModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/SmsModule/GetSmsResponseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestSmsModule.java" afterDir="false" />
+    <list default="true" id="467c9a7b-50d2-49f3-bff4-0131cc027787" name="Changes" comment="Task 2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Calls/CallsSMSModule/SMSRequestCalls.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataController/DataControllerSMSModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataController/DataControllerSMSModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestSmsModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSmsModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testNG.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Task2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,7 +61,9 @@
     "TestNG.TestDataAPI.executor": "Run",
     "TestNG.TestDataAPI.getData.executor": "Debug",
     "TestNG.TestSmsModule.testGet.executor": "Run",
-    "git-widget-placeholder": "Task2",
+    "TestNG.TestSmsModule.testSMSRequestModel.executor": "Run",
+    "TestNG.TestSmsModule.testSMSRequestModelIndividuals.executor": "Run",
+    "git-widget-placeholder": "Task3",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/tinatingvelesiani/IdeaProjects/RestApiLab"
   }
@@ -77,7 +76,7 @@
       <recent name="C:\Users\tinatingvelesiani\IdeaProjects\RestApiLab\src\main\java\Models\SMSModule" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TestSmsModule.testGet">
+  <component name="RunManager" selected="TestNG.TestSmsModule.testSMSRequestModelIndividuals">
     <configuration name="C:/Users/tinatingvelesiani/IdeaProjects/RestApiLab/testNG.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestApiLab" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testNG.xml" />
@@ -99,18 +98,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestDataAPI.getData" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestApiLab" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestDataAPI" />
-      <option name="METHOD_NAME" value="getData" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestSmsModule.testGet" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestApiLab" />
       <option name="PACKAGE_NAME" value="" />
@@ -123,12 +110,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestSmsModule.testSMSRequestModel" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestApiLab" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestSmsModule" />
+      <option name="METHOD_NAME" value="testSMSRequestModel" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSmsModule.testSMSRequestModelIndividuals" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestApiLab" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestSmsModule" />
+      <option name="METHOD_NAME" value="testSMSRequestModelIndividuals" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestSmsModule.testSMSRequestModelIndividuals" />
+        <item itemvalue="TestNG.TestSmsModule.testSMSRequestModel" />
+        <item itemvalue="TestNG.C:/Users/tinatingvelesiani/IdeaProjects/RestApiLab/testNG.xml" />
         <item itemvalue="TestNG.TestSmsModule.testGet" />
         <item itemvalue="TestNG.TestDataAPI" />
-        <item itemvalue="TestNG.TestDataAPI.getData" />
-        <item itemvalue="TestNG.C:/Users/tinatingvelesiani/IdeaProjects/RestApiLab/testNG.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -157,12 +169,21 @@
       <option name="project" value="LOCAL" />
       <updated>1738702815839</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Task 2">
+      <option name="closed" value="true" />
+      <created>1739216392946</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739216392946</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="tasks committed" />
-    <option name="LAST_COMMIT_MESSAGE" value="tasks committed" />
+    <MESSAGE value="Task 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 2" />
   </component>
 </project>

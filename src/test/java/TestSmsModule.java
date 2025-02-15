@@ -1,15 +1,16 @@
+import Calls.CallsSMSModule.SMSRequestCalls;
 import DataController.DataControllerSMSModule;
 import Models.SmsModule.GetSmsRequestModel;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import java.sql.SQLException;
 import java.util.List;
-import static io.restassured.RestAssured.given;
 
 public class TestSmsModule {
+
+    SMSRequestCalls smsRequestCalls = new SMSRequestCalls();
 
     @DataProvider(name = "getData")
     public Object[][] getData() throws SQLException {
@@ -18,18 +19,11 @@ public class TestSmsModule {
         return data;
     }
 
+
     @Test(dataProvider = "getData", priority = 1)
     public void testSMSRequestModel(GetSmsRequestModel getSmsRequestModel) {
-        Response response = given()
-                .header("Content-type", "application/json")
-                .contentType(ContentType.JSON)
-                .accept(ContentType.JSON)
-
-                .when()
-                .get("http://10.195.105.66:7000/api/Consent?TelNumber=" + getSmsRequestModel.getTelNumber());
-
+        Response response = smsRequestCalls.getSmsRequest(getSmsRequestModel.getTelNumber());
         int consentStatusId = response.jsonPath().getInt("data.consentStatusId");
-
         Assert.assertEquals(consentStatusId, getSmsRequestModel.getConsent());
     }
 
@@ -42,15 +36,8 @@ public class TestSmsModule {
 
     @Test (dataProvider = "getDataIndividual", priority = 2)
     public void testSMSRequestModelIndividuals(String personId, String telNumber, int consent) {
-        Response response = given()
-                .header("Content-type", "application/json")
-                .contentType(ContentType.JSON)
-                .accept(ContentType.JSON)
-                .when()
-                .get("http://10.195.105.66:7000/api/Consent?TelNumber=" + telNumber);
-
+        Response response = smsRequestCalls.getSmsRequestIndividual(telNumber);
         int consentStatusId = response.jsonPath().getInt("data.consentStatusId");
-
         Assert.assertEquals(consentStatusId, consent);
     }
 }

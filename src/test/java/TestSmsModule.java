@@ -1,43 +1,21 @@
-import Calls.CallsSMSModule.SMSRequestCalls;
-import DataController.DataControllerSMSModule;
-import Models.SmsModule.GetSmsRequestModel;
-import io.restassured.response.Response;
+import Models.SmsModule.GetConsent.GetSmsRequestModel;
+import Models.SmsModule.GetConsent.GetSmsResponseModel;
+import Models.SmsModule.PostConsent.PostSmsRequestModel;
+import Steps.SMSModule.ConsentSteps;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import java.sql.SQLException;
-import java.util.List;
 
-public class TestSmsModule {
+public class TestSmsModule extends ConfigTest{
 
-    SMSRequestCalls smsRequestCalls = new SMSRequestCalls();
+    ConsentSteps consentSteps = new ConsentSteps();
 
-    @DataProvider(name = "getData")
-    public Object[][] getData() throws SQLException {
-        List<GetSmsRequestModel> getSmsRequestModels = DataControllerSMSModule.getUserRequestModel(DataControllerSMSModule.queryGetTelNumbers);
-        Object[][] data = DataControllerSMSModule.getDataObjects(getSmsRequestModels);
-        return data;
-    }
-
-
-    @Test(dataProvider = "getData", priority = 1)
-    public void testSMSRequestModel(GetSmsRequestModel getSmsRequestModel) {
-        Response response = smsRequestCalls.getSmsRequest(getSmsRequestModel.getTelNumber());
-        int consentStatusId = response.jsonPath().getInt("data.consentStatusId");
-        Assert.assertEquals(consentStatusId, getSmsRequestModel.getConsent());
-    }
-
-    @DataProvider (name = "getDataIndividual")
-    public Object[][] getDataIndividual() throws SQLException {
-        List<GetSmsRequestModel> getSmsRequestModels = DataControllerSMSModule.getUserRequestModel(DataControllerSMSModule.queryGetTelNumbers);
-        Object[][] data = DataControllerSMSModule.getDataIndividual(getSmsRequestModels);
-        return data;
-    }
-
-    @Test (dataProvider = "getDataIndividual", priority = 2)
-    public void testSMSRequestModelIndividuals(String personId, String telNumber, int consent) {
-        Response response = smsRequestCalls.getSmsRequestIndividual(telNumber);
-        int consentStatusId = response.jsonPath().getInt("data.consentStatusId");
-        Assert.assertEquals(consentStatusId, consent);
+    @Test (dataProvider = "postSmsRequestModels", priority = 1)
+    public void postConsent(PostSmsRequestModel postSmsRequestModel) {
+        consentSteps.PostConsent(postSmsRequestModel);
+        GetSmsRequestModel getSmsRequestModel = new GetSmsRequestModel();
+        getSmsRequestModel.setTelNumber(postSmsRequestModel.getTelNumber());
+        GetSmsResponseModel getSmsResponseModel = consentSteps.GetConsent(getSmsRequestModel);
+        consentSteps.CompareConsent(getSmsResponseModel, postSmsRequestModel); //aq tel.number tu consent unda shemowmdes?
+        System.out.println("warmatebulia");
     }
 }

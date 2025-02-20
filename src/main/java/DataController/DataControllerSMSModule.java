@@ -3,7 +3,6 @@ package DataController;
 import DBAccessSQL.DBAccessSMSModule;
 import Models.SmsModule.GetConsent.GetSmsRequestModel;
 import Models.SmsModule.PostConsent.PostSmsRequestModel;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -69,22 +68,22 @@ public class DataControllerSMSModule {
             WHERE b.PersonId IS NULL
             	AND c.PersonId IS NULL
             	) AS a
-                        
+            
             UPDATE a
             SET a.PersonId = NULL
             FROM #tmp AS a
             WHERE a.rowNum = 1
-                        
+            
             UPDATE a
             SET a.TelNumber = NULL
             FROM #tmp AS a
             WHERE a.rowNum = 2
-                        
+            
             UPDATE a
             SET a.Channel = NULL
             FROM #tmp AS a
             WHERE a.rowNum = 3
-                        
+            
             SELECT
             	*
             FROM #tmp AS a

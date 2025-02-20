@@ -4,13 +4,13 @@ import Models.SmsModule.GetConsent.GetSmsRequestModel;
 import Models.SmsModule.GetConsent.GetSmsResponseModel;
 import Models.SmsModule.PostConsent.PostSmsRequestModel;
 import Utils.TestListener;
-//import io.qameta.allure.Step;
+import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import org.testng.Assert;
 
 public class ConsentSteps {
 
-   // @Step
+   @Step
     public GetSmsResponseModel GetConsent (GetSmsRequestModel getSmsRequestModel){
         ConsentCalls consentCalls = new ConsentCalls();
         GetSmsResponseModel getSmsResponseModel = new GetSmsResponseModel();
@@ -25,7 +25,7 @@ public class ConsentSteps {
         }
         return getSmsResponseModel;
     }
-   // @Step
+   @Step
     public void PostConsent (PostSmsRequestModel postSmsRequestModel){
         ConsentCalls consentCalls = new ConsentCalls();
         Response response = consentCalls.PostConsent(postSmsRequestModel);
@@ -40,8 +40,8 @@ public class ConsentSteps {
         }
     }
 
-  //  @Step
-    public void CompareConsent(GetSmsResponseModel getSmsResponseModel, PostSmsRequestModel postSmsRequestModel) {
-        Assert.assertEquals(getSmsResponseModel.getData().getConsentStatus(), postSmsRequestModel.getStatus());
+  @Step
+    public void CompareConsent(PostSmsRequestModel postSmsRequestModel, GetSmsResponseModel getSmsResponseModel) {
+        Assert.assertEquals(postSmsRequestModel.getStatus(), getSmsResponseModel.getData().getConsentStatusId());
     }
 }

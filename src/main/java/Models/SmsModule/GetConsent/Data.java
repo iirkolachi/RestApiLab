@@ -8,7 +8,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Data {
-    public int consentStatusId;
+    public String consentStatusId;
     public String consentStatus;
     public String dateUpdated;
 

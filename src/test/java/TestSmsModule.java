@@ -2,7 +2,6 @@ import Models.SmsModule.GetConsent.GetSmsRequestModel;
 import Models.SmsModule.GetConsent.GetSmsResponseModel;
 import Models.SmsModule.PostConsent.PostSmsRequestModel;
 import Steps.SMSModule.ConsentSteps;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TestSmsModule extends ConfigTest{
@@ -14,8 +13,8 @@ public class TestSmsModule extends ConfigTest{
         consentSteps.PostConsent(postSmsRequestModel);
         GetSmsRequestModel getSmsRequestModel = new GetSmsRequestModel();
         getSmsRequestModel.setTelNumber(postSmsRequestModel.getTelNumber());
+        getSmsRequestModel.setPersonId(postSmsRequestModel.getPersonId());
         GetSmsResponseModel getSmsResponseModel = consentSteps.GetConsent(getSmsRequestModel);
-        consentSteps.CompareConsent(getSmsResponseModel, postSmsRequestModel); //aq tel.number tu consent unda shemowmdes?
-        System.out.println("warmatebulia");
+        consentSteps.CompareConsent(postSmsRequestModel, getSmsResponseModel);
     }
 }

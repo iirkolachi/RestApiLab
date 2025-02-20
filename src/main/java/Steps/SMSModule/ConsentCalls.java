@@ -8,13 +8,20 @@ import static io.restassured.RestAssured.given;
 
 public class ConsentCalls {
     public Response GetConsent(GetSmsRequestModel getSmsRequestModel) {
+
+        String url;
+        if (getSmsRequestModel.getTelNumber() != null){
+            url = "http://10.195.105.66:7000/api/Consent?TelNumber=" + getSmsRequestModel.getTelNumber();
+        } else {
+            url = "http://10.195.105.66:7000/api/Consent?PersonId=" + getSmsRequestModel.getPersonId();
+        }
+
         return given()
                 .header("Content-type", "application/json")
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
-
                 .when()
-                .get("http://10.195.105.66:7000/api/Consent?TelNumber=" + getSmsRequestModel.getTelNumber());
+                .get(url);
     }
 
     public Response PostConsent(PostSmsRequestModel postSmsRequestModel) {
@@ -25,6 +32,5 @@ public class ConsentCalls {
                 .when()
                 .body(postSmsRequestModel)
                 .post("http://10.195.105.66:7000/api/Consent");
-
     }
 }

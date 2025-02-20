@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="467c9a7b-50d2-49f3-bff4-0131cc027787" name="Changes" comment="Task 3 with Calls class separately">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/SmsModule/PostConsent/PostSmsRequestModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Steps/SMSModule/ConsentSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/TestListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ConfigTest.java" afterDir="false" />
+    <list default="true" id="467c9a7b-50d2-49f3-bff4-0131cc027787" name="Changes" comment="Task 4">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Calls/CallsSMSModule/SMSRequestCalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Steps/SMSModule/ConsentCalls.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DataController/DataControllerSMSModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataController/DataControllerSMSModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/SmsModule/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/SmsModule/GetConsent/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/SmsModule/GetSmsRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/SmsModule/GetConsent/GetSmsRequestModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/SmsModule/GetSmsResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/SmsModule/GetConsent/GetSmsResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/SmsModule/GetConsent/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/SmsModule/GetConsent/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Steps/SMSModule/ConsentCalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Steps/SMSModule/ConsentCalls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Steps/SMSModule/ConsentSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Steps/SMSModule/ConsentSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/TestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ConfigTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ConfigTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestSmsModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSmsModule.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,14 +69,18 @@
     "TestNG.C:/Users/tinatingvelesiani/IdeaProjects/RestApiLab/testNG.xml.executor": "Run",
     "TestNG.TestDataAPI.executor": "Run",
     "TestNG.TestDataAPI.getData.executor": "Debug",
+    "TestNG.TestSmsModule.postConsent (1).executor": "Run",
     "TestNG.TestSmsModule.postConsent.executor": "Run",
     "TestNG.TestSmsModule.testGet.executor": "Run",
     "TestNG.TestSmsModule.testSMSRequestModel.executor": "Run",
     "TestNG.TestSmsModule.testSMSRequestModelIndividuals.executor": "Run",
-    "git-widget-placeholder": "Task4",
+    "git-widget-placeholder": "#3 on Task4",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/tinatingvelesiani/IdeaProjects/RestApiLab",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "terminal"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -89,18 +91,42 @@
       <recent name="C:\Users\tinatingvelesiani\IdeaProjects\RestApiLab\src\main\java\Models\SMSModule" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TestSmsModule.postConsent">
+  <component name="RunManager" selected="TestNG.TestSmsModule.postConsent (1)">
+    <configuration name="Unnamed" type="ShConfigurationType" nameIsGenerated="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="allure serve target/allure-results" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="powershell.exe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="C:/Users/tinatingvelesiani/IdeaProjects/RestApiLab/testNG.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestApiLab" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testNG.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSmsModule.postConsent" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSmsModule.postConsent (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestApiLab" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestSmsModule" />
@@ -112,12 +138,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSmsModule.testGet" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSmsModule.postConsent" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestApiLab" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestSmsModule" />
-      <option name="METHOD_NAME" value="testGet" />
+      <option name="METHOD_NAME" value="postConsent" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea$MAVEN_REPOSITORY$" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSmsModule.postConsent" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestApiLab" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestSmsModule" />
+      <option name="METHOD_NAME" value="postConsent" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-javaagent:path/to/tinatingvelesiani/agent.jar" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -148,13 +208,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Shell Script.Unnamed" />
+      <item itemvalue="TestNG.TestSmsModule.postConsent (1)" />
+      <item itemvalue="TestNG.TestSmsModule.postConsent" />
+      <item itemvalue="TestNG.C:/Users/tinatingvelesiani/IdeaProjects/RestApiLab/testNG.xml" />
+      <item itemvalue="TestNG.TestSmsModule.testSMSRequestModel" />
+      <item itemvalue="TestNG.TestSmsModule.testSMSRequestModelIndividuals" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestSmsModule.postConsent (1)" />
+        <item itemvalue="TestNG.TestSmsModule.postConsent" />
         <item itemvalue="TestNG.TestSmsModule.postConsent" />
         <item itemvalue="TestNG.TestSmsModule.testSMSRequestModelIndividuals" />
         <item itemvalue="TestNG.TestSmsModule.testSMSRequestModel" />
-        <item itemvalue="TestNG.C:/Users/tinatingvelesiani/IdeaProjects/RestApiLab/testNG.xml" />
-        <item itemvalue="TestNG.TestSmsModule.testGet" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739653787188</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Task 4">
+      <option name="closed" value="true" />
+      <created>1740008739279</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740008739279</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,6 +311,7 @@
     <MESSAGE value="Task 2" />
     <MESSAGE value="Task 3" />
     <MESSAGE value="Task 3 with Calls class separately" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 3 with Calls class separately" />
+    <MESSAGE value="Task 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 4" />
   </component>
 </project>

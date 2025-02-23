@@ -2,35 +2,42 @@ package Steps.SMSModule;
 
 import Models.SmsModule.GetConsent.GetSmsRequestModel;
 import Models.SmsModule.PostConsent.PostSmsRequestModel;
-import io.restassured.http.ContentType;
+import Utils.ApiRequestSpec;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import static io.restassured.RestAssured.given;
 
 public class ConsentCalls {
+    RequestSpecification requestSpecification = ApiRequestSpec.getRequestSpec();
+
     public Response GetConsent(GetSmsRequestModel getSmsRequestModel) {
 
         String url;
-        if (getSmsRequestModel.getTelNumber() != null){
-            url = "http://10.195.105.66:7000/api/Consent?TelNumber=" + getSmsRequestModel.getTelNumber();
+        if (getSmsRequestModel.getTelNumber() != null) {
+            url = ApiRequestSpec.baseUrl + "/api/Consent?TelNumber=" + getSmsRequestModel.getTelNumber();
         } else {
-            url = "http://10.195.105.66:7000/api/Consent?PersonId=" + getSmsRequestModel.getPersonId();
+            url = ApiRequestSpec.baseUrl + "/api/Consent?PersonId=" + getSmsRequestModel.getPersonId();
         }
 
-        return given()
-                .header("Content-type", "application/json")
-                .contentType(ContentType.JSON)
-                .accept(ContentType.JSON)
+        Response response = given()
+                .when()
+                .spec(requestSpecification)
                 .when()
                 .get(url);
+
+        response.then().spec(ApiRequestSpec.getResponseSpec());
+        return response;
     }
 
     public Response PostConsent(PostSmsRequestModel postSmsRequestModel) {
-        return given()
-                .header("Content-type", "application/json")
-                .contentType(ContentType.JSON)
-                .accept(ContentType.JSON)
+        Response response = given()
+                .when()
+                .spec(requestSpecification)
                 .when()
                 .body(postSmsRequestModel)
-                .post("http://10.195.105.66:7000/api/Consent");
+                .post("/api/Consent");
+
+        response.then().spec(ApiRequestSpec.getResponseSpec());
+        return response;
     }
 }

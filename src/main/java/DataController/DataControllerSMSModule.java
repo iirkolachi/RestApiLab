@@ -89,8 +89,8 @@ public class DataControllerSMSModule {
             FROM #tmp AS a
             """;
 
-    public static List<GetSmsRequestModel> getUserRequestModel (String query) throws SQLException {
-        List<GetSmsRequestModel> getUserRequestModel = new ArrayList<>();
+    public static List<GetSmsRequestModel> getSmsRequestModels (String query) throws SQLException {
+        List<GetSmsRequestModel> getUserRequestModels = new ArrayList<>();
         Connection dataBaseAccess = DBAccessSMSModule.getSMSModule();
         PreparedStatement preparedStatement =  dataBaseAccess.prepareStatement(query);
         ResultSet resultSet = preparedStatement.executeQuery();
@@ -99,12 +99,12 @@ public class DataControllerSMSModule {
         getSmsRequestModel.setPersonId(resultSet.getString("PersonId"));
         getSmsRequestModel.setTelNumber(resultSet.getString("TelNumber"));
         getSmsRequestModel.setConsent(Integer.parseInt(resultSet.getString("Consent")));
-        getUserRequestModel.add(getSmsRequestModel);
+        getUserRequestModels.add(getSmsRequestModel);
                 }
-        return getUserRequestModel;
+        return getUserRequestModels;
             }
 
-    public static Object[][] getDataObjects (List<GetSmsRequestModel> getSmsRequestModels) {
+    public static Object[][] getSmsRequestModelsObjects (List<GetSmsRequestModel> getSmsRequestModels) {
         Object[][] data = new Object[getSmsRequestModels.size()][1];
         for (int i = 0; i < getSmsRequestModels.size(); i++) {
             data[i][0] = getSmsRequestModels.get(i);

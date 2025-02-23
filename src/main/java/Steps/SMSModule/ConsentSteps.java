@@ -3,45 +3,57 @@ package Steps.SMSModule;
 import Models.SmsModule.GetConsent.GetSmsRequestModel;
 import Models.SmsModule.GetConsent.GetSmsResponseModel;
 import Models.SmsModule.PostConsent.PostSmsRequestModel;
-import Utils.TestListener;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import org.testng.Assert;
 
 public class ConsentSteps {
 
-   @Step
+    @Step
     public GetSmsResponseModel GetConsent (GetSmsRequestModel getSmsRequestModel){
         ConsentCalls consentCalls = new ConsentCalls();
-        GetSmsResponseModel getSmsResponseModel = new GetSmsResponseModel();
+        GetSmsResponseModel getSmsResponseModel;
         Response response = consentCalls.GetConsent(getSmsRequestModel);
-        int statusCode = response.getStatusCode();
-        if(statusCode == 200) {
-            getSmsResponseModel = response.as(GetSmsResponseModel.class);
-            Assert.assertEquals(statusCode, 200);
-        }
-        else {
-            Assert.assertNotEquals(statusCode, 200);
-        }
+        getSmsResponseModel = response.as(GetSmsResponseModel.class);
+
         return getSmsResponseModel;
     }
+
    @Step
     public void PostConsent (PostSmsRequestModel postSmsRequestModel){
         ConsentCalls consentCalls = new ConsentCalls();
         Response response = consentCalls.PostConsent(postSmsRequestModel);
-        int statusCode = response.getStatusCode();
-        if(statusCode == 200) {
-            new TestListener().messageText("პოსტ მეთოდი წარმატებულია, postRequestModel = " + postSmsRequestModel);
-            Assert.assertEquals(statusCode, 200);
-        }
-        else {
-            new TestListener().messageText("პოსტ მეთოდი წარუმატებელია, response = " + response.asPrettyString());
-            Assert.assertNotEquals(statusCode, 200);
-        }
     }
 
   @Step
-    public void CompareConsent(PostSmsRequestModel postSmsRequestModel, GetSmsResponseModel getSmsResponseModel) {
-        Assert.assertEquals(postSmsRequestModel.getStatus(), getSmsResponseModel.getData().getConsentStatusId());
+    public void CompareConsent(GetSmsResponseModel getSmsResponseModel, PostSmsRequestModel postSmsRequestModel) {
+        Assert.assertEquals(getSmsResponseModel.getData().getConsentStatusId(), postSmsRequestModel.getStatus());
+    }
+
+
+    //fluent interface
+
+    public GetSmsResponseModel getSmsResponseModel = new GetSmsResponseModel();
+
+    @Step
+    public ConsentSteps GetConsentFluent (GetSmsRequestModel getSmsRequestModel){
+        ConsentCalls consentCalls = new ConsentCalls();
+        Response response = consentCalls.GetConsent(getSmsRequestModel);
+        getSmsResponseModel = response.as(GetSmsResponseModel.class);
+
+        return this;
+    }
+
+    @Step
+    public ConsentSteps PostConsentFluent (PostSmsRequestModel postSmsRequestModel){
+        ConsentCalls consentCalls = new ConsentCalls();
+        Response response = consentCalls.PostConsent(postSmsRequestModel);
+
+        return this;
+    }
+
+    @Step
+    public void CompareConsentFluent (GetSmsResponseModel getSmsResponseModel, PostSmsRequestModel postSmsRequestModel) {
+        Assert.assertEquals(getSmsResponseModel.getData().getConsentStatusId(), postSmsRequestModel.getStatus());
     }
 }

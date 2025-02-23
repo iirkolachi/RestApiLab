@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="467c9a7b-50d2-49f3-bff4-0131cc027787" name="Changes" comment="Task 4">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="467c9a7b-50d2-49f3-bff4-0131cc027787" name="Changes" comment="Commit to Task 4">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/ApiRequestSpec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DataController/DataControllerSMSModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataController/DataControllerSMSModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/SmsModule/GetConsent/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/SmsModule/GetConsent/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Steps/SMSModule/ConsentCalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Steps/SMSModule/ConsentCalls.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Steps/SMSModule/ConsentSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Steps/SMSModule/ConsentSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/TestListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ConfigTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ConfigTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestSmsModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSmsModule.java" afterDir="false" />
     </list>
@@ -36,7 +33,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Task3" />
+        <entry key="$PROJECT_DIR$" value="Task4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,12 +66,15 @@
     "TestNG.C:/Users/tinatingvelesiani/IdeaProjects/RestApiLab/testNG.xml.executor": "Run",
     "TestNG.TestDataAPI.executor": "Run",
     "TestNG.TestDataAPI.getData.executor": "Debug",
+    "TestNG.TestSmsModule.getConsent.executor": "Run",
+    "TestNG.TestSmsModule.getConsentFluent.executor": "Run",
     "TestNG.TestSmsModule.postConsent (1).executor": "Run",
     "TestNG.TestSmsModule.postConsent.executor": "Run",
+    "TestNG.TestSmsModule.postConsentFluent.executor": "Run",
     "TestNG.TestSmsModule.testGet.executor": "Run",
     "TestNG.TestSmsModule.testSMSRequestModel.executor": "Run",
     "TestNG.TestSmsModule.testSMSRequestModelIndividuals.executor": "Run",
-    "git-widget-placeholder": "#3 on Task4",
+    "git-widget-placeholder": "Task5",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/tinatingvelesiani/IdeaProjects/RestApiLab",
     "project.structure.last.edited": "Project",
@@ -107,19 +107,24 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="C:/Users/tinatingvelesiani/IdeaProjects/RestApiLab/testNG.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSmsModule.getConsent" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestApiLab" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testNG.xml" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="PROPERTIES_FILE" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestSmsModule" />
+      <option name="METHOD_NAME" value="getConsent" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSmsModule.getConsentFluent" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestApiLab" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestSmsModule" />
+      <option name="METHOD_NAME" value="getConsentFluent" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -138,23 +143,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSmsModule.postConsent" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSmsModule.postConsentFluent" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestApiLab" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestSmsModule" />
-      <option name="METHOD_NAME" value="postConsent" />
-      <option name="GROUP_NAME" value="" />
+      <option name="METHOD_NAME" value="postConsentFluent" />
       <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea$MAVEN_REPOSITORY$" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -184,18 +178,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSmsModule.testSMSRequestModel" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestApiLab" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestSmsModule" />
-      <option name="METHOD_NAME" value="testSMSRequestModel" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestSmsModule.testSMSRequestModelIndividuals" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestApiLab" />
       <option name="PACKAGE_NAME" value="" />
@@ -210,19 +192,19 @@
     </configuration>
     <list>
       <item itemvalue="Shell Script.Unnamed" />
+      <item itemvalue="TestNG.TestSmsModule.getConsentFluent" />
+      <item itemvalue="TestNG.TestSmsModule.postConsentFluent" />
+      <item itemvalue="TestNG.TestSmsModule.getConsent" />
       <item itemvalue="TestNG.TestSmsModule.postConsent (1)" />
-      <item itemvalue="TestNG.TestSmsModule.postConsent" />
-      <item itemvalue="TestNG.C:/Users/tinatingvelesiani/IdeaProjects/RestApiLab/testNG.xml" />
-      <item itemvalue="TestNG.TestSmsModule.testSMSRequestModel" />
       <item itemvalue="TestNG.TestSmsModule.testSMSRequestModelIndividuals" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.TestSmsModule.postConsent (1)" />
-        <item itemvalue="TestNG.TestSmsModule.postConsent" />
-        <item itemvalue="TestNG.TestSmsModule.postConsent" />
+        <item itemvalue="TestNG.TestSmsModule.getConsentFluent" />
+        <item itemvalue="TestNG.TestSmsModule.postConsentFluent" />
+        <item itemvalue="TestNG.TestSmsModule.getConsent" />
         <item itemvalue="TestNG.TestSmsModule.testSMSRequestModelIndividuals" />
-        <item itemvalue="TestNG.TestSmsModule.testSMSRequestModel" />
       </list>
     </recent_temporary>
   </component>
@@ -291,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740008739279</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit to Task 4">
+      <option name="closed" value="true" />
+      <created>1740067242941</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740067242941</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -312,6 +302,7 @@
     <MESSAGE value="Task 3" />
     <MESSAGE value="Task 3 with Calls class separately" />
     <MESSAGE value="Task 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 4" />
+    <MESSAGE value="Commit to Task 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit to Task 4" />
   </component>
 </project>
